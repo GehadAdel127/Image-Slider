@@ -15,13 +15,14 @@ next.onclick = function(){
 prev.onclick = function(){
     itemActive = itemActive - 1
     if(itemActive < 0){
-        itemActive = countItem
+        itemActive = countItem - 1
     }
     showSlider()
 }
 let refreshInterval = setInterval(() => {
     next.click()
 }, 5000)
+
 function showSlider(){
     let lastActiveItem = document.querySelector(".slider .list .item.active")
     let lastActiveThumbnail = document.querySelector(".thumbnail .item.active")
@@ -31,7 +32,7 @@ function showSlider(){
 
     items[itemActive].classList.add("active")
     thumbnails[itemActive].classList.add("active")
-    setPositionThumbnail()
+    setPositionThumbnail(lastActiveThumbnail)
 
     clearInterval(refreshInterval)
     refreshInterval = setInterval(() => {
@@ -39,7 +40,7 @@ function showSlider(){
     }, 5000)
 }
 
-function setPositionThumbnail (){
+function setPositionThumbnail(lastActiveThumbnail){
     lastActiveThumbnail.scrollIntoView({
         behavior : "smooth",
         block : "nearest",
