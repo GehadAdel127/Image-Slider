@@ -174,7 +174,12 @@ header .menu ul{
     .thumbnail{
         justify-content: start;
         padding: 0 35px;
-        height: 210px;
+        height: 270px;
+        bottom : 30px;
+    }
+    .thumbnail .item{
+        width : 150px;
+        height : 250px;
     }
     .slider .list .item .content h2{
         font-size: 40px;
