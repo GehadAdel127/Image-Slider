@@ -28,6 +28,6 @@ Perfect for:
 ---
 
 ## 🚀 Demo  
-
+https://imageslider127.netlify.app/
 
 ---
