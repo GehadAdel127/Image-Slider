@@ -32,7 +32,7 @@ function showSlider(){
 
     items[itemActive].classList.add("active")
     thumbnails[itemActive].classList.add("active")
-    setPositionThumbnail(lastActiveThumbnail)
+    setPositionThumbnail(thumbnails[itemActive])
 
     clearInterval(refreshInterval)
     refreshInterval = setInterval(() => {
